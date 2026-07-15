@@ -131,6 +131,21 @@ export default function WidgetInteractions() {
         return;
       }
 
+      const loadMore = target.closest("#relatedloadMoreBtn");
+      if (loadMore instanceof HTMLElement) {
+        e.preventDefault();
+        const scope = loadMore.closest(".elementor-shortcode") ?? document;
+        const cards = Array.from(scope.querySelectorAll(".card")).filter(
+          (c): c is HTMLElement => c instanceof HTMLElement
+        );
+        const hidden = cards.filter((c) => c.style.display === "none");
+        const batch = Number(loadMore.dataset.batch) || cards.length - hidden.length || 4;
+        loadMore.dataset.batch = String(batch);
+        for (const c of hidden.slice(0, batch)) c.style.display = "block";
+        if (hidden.length <= batch) loadMore.style.display = "none";
+        return;
+      }
+
       const lightboxLink = target.closest("a[data-elementor-open-lightbox]");
       if (lightboxLink) {
         const mode = lightboxLink.getAttribute("data-elementor-open-lightbox");
