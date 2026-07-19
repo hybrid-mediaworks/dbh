@@ -2219,6 +2219,7 @@ ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-bloc
 .elementor-103459 .elementor-element.elementor-element-6115d9e4 .elementor-divider-separator { width: 100%; }
 .page-id-2998 .elementor-absolute .elementor-button .elementor-button-content-wrapper span { color : #FFF }
 .page-id-2998 .elementor-button { text-decoration: none !important; }
+.elementor-element-098e0af .elementor-button { text-decoration: none; }
 @keyframes elementor-headline-dash { 
   0% { opacity: 1; stroke-dasharray: 0, 1500; }
   100% { opacity: 1; stroke-dasharray: 1500, 1500; }
@@ -2299,3 +2300,7 @@ ul { display: block; list-style-type: disc; margin-block-start: 1em; margin-bloc
   60% { opacity: 0; transform: translateX(110%); }
   100% { opacity: 0; transform: translateX(100%); }
 }
+/* Author-box avatars: the exported inline "width:100%;height:auto" makes each avatar
+   render at its natural size, so a larger source image (e.g. 300x300) blows up while
+   64x64 ones look fine. Force the intended fixed avatar size across all pages. */
+.elementor-author-box__avatar img { width: 64px !important; height: 64px !important; object-fit: cover; }

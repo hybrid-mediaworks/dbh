@@ -1,7 +1,7 @@
 import "./page.css";
 import type { Metadata } from "next";
 import Blogs from "@/components/pages/Blogs";
-import { fetchPageData } from "@/lib/wordpress";
+import { fetchPageData, fetchBlogs } from "@/lib/wordpress";
 
 export const revalidate = 60;
 
@@ -15,7 +15,23 @@ export async function generateMetadata(): Promise<import("next").Metadata> {
   };
 }
 
-export default async function Page() {
-  const data = await fetchPageData("blogs");
-  return <Blogs {...(data?.fields ?? {})} />;
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page } = await searchParams;
+  const currentPage = Math.max(1, Number(page) || 1);
+  const [data, { blogs, totalPages }] = await Promise.all([
+    fetchPageData("blogs"),
+    fetchBlogs(currentPage),
+  ]);
+  return (
+    <Blogs
+      fields={data?.fields ?? {}}
+      blogs={blogs}
+      currentPage={currentPage}
+      totalPages={totalPages}
+    />
+  );
 }

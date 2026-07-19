@@ -1067,3 +1067,48 @@ body.rtl .elementor-2998 .elementor-element.elementor-element-bcd827b { left: 30
 .dual-track::after { right: 0px; background: linear-gradient(to left, rgb(85, 170, 220) 0%, transparent 100%); }
 @media (max-width: 600px) {:root { --carousel-height: 340px; --slide-gap: 0px; --row-gap: 0px; }
 .dual-track::before, .dual-track::after { width: 40px; }}
+/* Facilities dual-track marquee: the static export dropped the base (desktop) CSS
+   variables and the slide-row/belt/item layout (only the max-width:600px :root
+   override survived), plus the requestAnimationFrame autoscroll. Restored here;
+   the belts are populated in the markup and animated by <FacilitiesMarquee />. */
+:root {
+  --row-gap: 0px;
+  --slide-gap: 0px;
+  --row-height: calc((var(--carousel-height) - var(--row-gap)) / 2);
+}
+/* Desktop height in a min-width query so it does not override the existing
+   @media (max-width: 600px) mobile value (340px) regardless of source order. */
+@media (min-width: 601px) {
+  :root { --carousel-height: 539px; }
+}
+.slide-row {
+  height: var(--row-height);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.slide-belt {
+  display: flex;
+  flex-direction: row;
+  gap: var(--slide-gap);
+  height: 100%;
+  will-change: transform;
+  align-items: stretch;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.slide-item {
+  flex-shrink: 0;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* !important overrides the baked-in inline "width:100%;height:auto" so every image
+   is the same height (row height) with proportional width — uniform slide size. */
+.slide-item img {
+  height: 100% !important;
+  width: auto !important;
+  display: block;
+  object-fit: cover;
+  pointer-events: none;
+}

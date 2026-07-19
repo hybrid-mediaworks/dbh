@@ -159,3 +159,13 @@
 @media (max-width: 1024px) and (min-width: 768px) {.elementor-103345 .elementor-element.elementor-element-79a62f6b { --width: 100%; }}
 .elementor-widget-loop-grid .elementor-button { font-family: var( --e-global-typography-accent-font-family ), Sans-serif; font-weight: var( --e-global-typography-accent-font-weight ); background-color: var( --e-global-color-accent ); }
 @media screen and (min-device-width: 1025px) and (max-device-width: 1366px) {.elementor-loop-container.elementor-grid { grid-template-columns: repeat(3, 1fr) !important; }}
+/* Dynamic blog cards: the export set the card background per post-id, but every card
+   uses the same image. Apply it to all cards in the blog loop (element 0e84e69 is the
+   shared loop-template hash) so cards with new post ids still get the background. */
+.elementor-1037 .elementor-element.elementor-element-0e84e69:not(.elementor-motion-effects-element-type-background),
+.elementor-1037 .elementor-element.elementor-element-0e84e69 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+  background-image: url("/images/7927292c42a939b271b2474c40de4536.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
