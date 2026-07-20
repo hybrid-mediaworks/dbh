@@ -42,7 +42,7 @@ function galleryHtml(images: GalleryImage[]): string {
       const dims =
         img.width && img.height ? ` width="${img.width}" height="${img.height}"` : ''
       return (
-        `<a class="facility-gallery-item" href="${escapeHtml(full)}" target="_blank" rel="noopener noreferrer">` +
+        `<a class="facility-gallery-item" href="${escapeHtml(full)}" data-elementor-open-lightbox="yes" rel="noopener noreferrer">` +
         `<img src="${escapeHtml(display)}" alt="${alt}" loading="lazy" decoding="async"${dims} />` +
         `</a>`
       )
