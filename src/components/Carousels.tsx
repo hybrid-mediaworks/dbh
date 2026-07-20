@@ -10,6 +10,17 @@ function toCount(value: unknown, fallback: number): number {
   return Number.isFinite(n) && n > 0 ? n : fallback;
 }
 
+// Elementor's image_spacing_custom ({ size, unit }) maps to Swiper's spaceBetween,
+// which renders as margin-right between slides. Falls back when tablet/mobile are blank.
+function toGap(value: unknown, fallback: number): number {
+  const size = (value as { size?: unknown } | null | undefined)?.size;
+  // Elementor leaves tablet/mobile blank ("") to inherit the desktop value —
+  // note Number("") is 0, not NaN, so guard the empty/missing case explicitly.
+  if (size === "" || size == null) return fallback;
+  const n = Number(size);
+  return Number.isFinite(n) && n >= 0 ? n : fallback;
+}
+
 export default function Carousels() {
   const pathname = usePathname();
   useEffect(() => {
@@ -47,12 +58,16 @@ export default function Carousels() {
           ? Array.from(wrapper.children).filter((c) => c.classList.contains("swiper-slide")).length
           : 0;
         const wantsLoop = settings.infinite === "yes" || settings.loop === "yes";
+        const gap = toGap(settings.image_spacing_custom, 0);
+        const gapTablet = toGap(settings.image_spacing_custom_tablet, gap);
+        const gapMobile = toGap(settings.image_spacing_custom_mobile, gap);
         const options: SwiperOptions = {
           modules: [Navigation, Pagination, Autoplay],
           slidesPerView: mobile,
+          spaceBetween: gapMobile,
           breakpoints: {
-            768: { slidesPerView: tablet },
-            1025: { slidesPerView: desktop },
+            768: { slidesPerView: tablet, spaceBetween: gapTablet },
+            1025: { slidesPerView: desktop, spaceBetween: gap },
           },
           loop: wantsLoop && slideCount >= Math.max(desktop, tablet, mobile) * 2,
           speed: toCount(settings.speed, 500),

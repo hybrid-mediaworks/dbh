@@ -1,10 +1,89 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { BlogItem } from '@/lib/wordpress';
 
 
-export default function Blogs(props: Record<string, string>) {
-  const address_county = props.address_county ?? "Orange County";
+type BlogsProps = {
+  fields?: Record<string, string>;
+  blogs: BlogItem[];
+  currentPage: number;
+  totalPages: number;
+};
+
+// One blog card in the loop grid: the page title (from acf.h1) + a "Learn More" link.
+function BlogCard({ blog }: { blog: BlogItem }) {
+  return (
+    <div className={`elementor elementor-1037 e-loop-item e-loop-item-${blog.id} post-${blog.id} page type-page status-publish hentry`}>
+      <div className="elementor-element elementor-element-0e84e69 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div className="e-con-inner">
+          <div className="elementor-element elementor-element-5ef77ba post_title elementor-widget elementor-widget-heading" data-widget_type="heading.default">
+            <div className="elementor-widget-container">
+              <h3 className="elementor-heading-title elementor-size-default"></h3>
+              <h1>{blog.title}</h1>
+            </div>
+          </div>
+          <div className="elementor-element elementor-element-35c3479 elementor-widget elementor-widget-button" data-widget_type="button.default">
+            <div className="elementor-widget-container">
+              <div className="elementor-button-wrapper">
+                <Link className="elementor-button elementor-button-link elementor-size-sm" href={blog.href}>
+                  <span className="elementor-button-content-wrapper">
+                    <span className="elementor-button-icon">
+                      <svg width={11} height={11} viewBox="0 0 11 11" fill="none">
+                        <path d="M9.16667 3.15333L1.24667 11L0 9.75333L7.84667 1.83333H0.953333V0H11V10.0467H9.16667V3.15333Z" fill="white"></path>
+                      </svg>
+                    </span>
+                    <span className="elementor-button-text">Learn More</span>
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Windowed page list: 1 … (current-1) current (current+1) … total.
+function paginationRange(current: number, total: number): (number | "dots")[] {
+  const range: (number | "dots")[] = [];
+  const left = Math.max(2, current - 1);
+  const right = Math.min(total - 1, current + 1);
+  range.push(1);
+  if (left > 2) range.push("dots");
+  for (let i = left; i <= right; i++) range.push(i);
+  if (right < total - 1) range.push("dots");
+  if (total > 1) range.push(total);
+  return range;
+}
+
+function Pagination({ current, total }: { current: number; total: number }) {
+  if (total <= 1) return null;
+  const href = (p: number) => (p === 1 ? "/blogs/" : `/blogs/?page=${p}`);
+  return (
+    <nav className="elementor-pagination" aria-label="Pagination">
+      {paginationRange(current, total).map((p, i) =>
+        p === "dots" ? (
+          <span key={`dots-${i}`} className="page-numbers dots">…</span>
+        ) : p === current ? (
+          <span key={p} aria-current="page" className="page-numbers current">
+            <span className="elementor-screen-only">Page</span>
+            {p}
+          </span>
+        ) : (
+          <Link key={p} className="page-numbers" href={href(p)}>
+            <span className="elementor-screen-only">Page</span>
+            {p}
+          </Link>
+        )
+      )}
+    </nav>
+  );
+}
+
+export default function Blogs({ fields = {}, blogs, currentPage, totalPages }: BlogsProps) {
+  const address_county = fields.address_county ?? "Orange County";
   return (
     <>
     <div className="blog wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master hello-elementor-default elementor-page-1021 elementor-default elementor-template-full-width elementor-kit-7 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
@@ -42,229 +121,12 @@ export default function Blogs(props: Record<string, string>) {
         <div className="elementor-element elementor-element-742ce1b blog_loop elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-loop-grid" data-settings="{&quot;template_id&quot;:&quot;1037&quot;,&quot;pagination_type&quot;:&quot;numbers&quot;,&quot;pagination_load_type&quot;:&quot;ajax&quot;,&quot;_skin&quot;:&quot;post&quot;,&quot;columns&quot;:&quot;3&quot;,&quot;columns_tablet&quot;:&quot;2&quot;,&quot;columns_mobile&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;[data-elementor-type=\\&quot;loop-item\\&quot;]&quot;,&quot;row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-grid.post">
           <div className="elementor-widget-container">
             <div className="elementor-loop-container elementor-grid" role="list">
-              <div className="elementor elementor-1037 e-loop-item e-loop-item-105046 post-105046 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonazepam-klonopin topic-2-addiction">
-                <div className="elementor-element elementor-element-0e84e69 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                  <div className="e-con-inner">
-                    <div className="elementor-element elementor-element-5ef77ba post_title elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default"></h3>
-                        <h1>
-                          Clonazepam Addiction: Signs, Dependence, and Treatment Options
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="elementor-element elementor-element-35c3479 elementor-widget elementor-widget-button" data-widget_type="button.default">
-                      <div className="elementor-widget-container">
-                        <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="/location-served/usa/clonazepam-addiction-treatment/">
-                            <span className="elementor-button-content-wrapper">
-                              <span className="elementor-button-icon">
-                                <svg width={11} height={11} viewBox="0 0 11 11" fill="none">
-                                  <path d="M9.16667 3.15333L1.24667 11L0 9.75333L7.84667 1.83333H0.953333V0H11V10.0467H9.16667V3.15333Z" fill="white"></path>
-                                </svg>
-                              </span>
-                              <span className="elementor-button-text">
-                                Learn More
-                              </span>
-                            </span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="elementor elementor-1037 e-loop-item e-loop-item-105008 post-105008 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-clonidine topic-2-addiction">
-                <div className="elementor-element elementor-element-0e84e69 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                  <div className="e-con-inner">
-                    <div className="elementor-element elementor-element-5ef77ba post_title elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default"></h3>
-                        <h1>
-                          Clonidine Addiction: Risks, Withdrawal, and Treatment
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="elementor-element elementor-element-35c3479 elementor-widget elementor-widget-button" data-widget_type="button.default">
-                      <div className="elementor-widget-container">
-                        <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="/location-served/usa/clonidine-addiction-treatment/">
-                            <span className="elementor-button-content-wrapper">
-                              <span className="elementor-button-icon">
-                                <svg width={11} height={11} viewBox="0 0 11 11" fill="none">
-                                  <path d="M9.16667 3.15333L1.24667 11L0 9.75333L7.84667 1.83333H0.953333V0H11V10.0467H9.16667V3.15333Z" fill="white"></path>
-                                </svg>
-                              </span>
-                              <span className="elementor-button-text">
-                                Learn More
-                              </span>
-                            </span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="elementor elementor-1037 e-loop-item e-loop-item-105048 post-105048 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-codeine topic-2-addiction">
-                <div className="elementor-element elementor-element-0e84e69 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                  <div className="e-con-inner">
-                    <div className="elementor-element elementor-element-5ef77ba post_title elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default"></h3>
-                        <h1>
-                          Understanding Codeine Addiction
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="elementor-element elementor-element-35c3479 elementor-widget elementor-widget-button" data-widget_type="button.default">
-                      <div className="elementor-widget-container">
-                        <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="/location-served/usa/codeine-addiction-treatment/">
-                            <span className="elementor-button-content-wrapper">
-                              <span className="elementor-button-icon">
-                                <svg width={11} height={11} viewBox="0 0 11 11" fill="none">
-                                  <path d="M9.16667 3.15333L1.24667 11L0 9.75333L7.84667 1.83333H0.953333V0H11V10.0467H9.16667V3.15333Z" fill="white"></path>
-                                </svg>
-                              </span>
-                              <span className="elementor-button-text">
-                                Learn More
-                              </span>
-                            </span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="elementor elementor-1037 e-loop-item e-loop-item-105038 post-105038 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-buprenorphine topic-2-addiction">
-                <div className="elementor-element elementor-element-0e84e69 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                  <div className="e-con-inner">
-                    <div className="elementor-element elementor-element-5ef77ba post_title elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default"></h3>
-                        <h1>
-                          Buprenorphine Addiction: Clinical Guide
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="elementor-element elementor-element-35c3479 elementor-widget elementor-widget-button" data-widget_type="button.default">
-                      <div className="elementor-widget-container">
-                        <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="/location-served/usa/buprenorphine-addiction-treatment/">
-                            <span className="elementor-button-content-wrapper">
-                              <span className="elementor-button-icon">
-                                <svg width={11} height={11} viewBox="0 0 11 11" fill="none">
-                                  <path d="M9.16667 3.15333L1.24667 11L0 9.75333L7.84667 1.83333H0.953333V0H11V10.0467H9.16667V3.15333Z" fill="white"></path>
-                                </svg>
-                              </span>
-                              <span className="elementor-button-text">
-                                Learn More
-                              </span>
-                            </span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="elementor elementor-1037 e-loop-item e-loop-item-105040 post-105040 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-buspar topic-2-addiction">
-                <div className="elementor-element elementor-element-0e84e69 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                  <div className="e-con-inner">
-                    <div className="elementor-element elementor-element-5ef77ba post_title elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default"></h3>
-                        <h1>
-                          Buspar Addiction: Abuse, Withdrawal Symptoms, And Treatment
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="elementor-element elementor-element-35c3479 elementor-widget elementor-widget-button" data-widget_type="button.default">
-                      <div className="elementor-widget-container">
-                        <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="/location-served/usa/buspar-addiction-treatment/">
-                            <span className="elementor-button-content-wrapper">
-                              <span className="elementor-button-icon">
-                                <svg width={11} height={11} viewBox="0 0 11 11" fill="none">
-                                  <path d="M9.16667 3.15333L1.24667 11L0 9.75333L7.84667 1.83333H0.953333V0H11V10.0467H9.16667V3.15333Z" fill="white"></path>
-                                </svg>
-                              </span>
-                              <span className="elementor-button-text">
-                                Learn More
-                              </span>
-                            </span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="elementor elementor-1037 e-loop-item e-loop-item-105042 post-105042 page type-page status-publish hentry geo-national intent-medium marketing-channel-seo template-blog template-cro1 topic-butalbital-fioricet topic-2-addiction">
-                <div className="elementor-element elementor-element-0e84e69 e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                  <div className="e-con-inner">
-                    <div className="elementor-element elementor-element-5ef77ba post_title elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                      <div className="elementor-widget-container">
-                        <h3 className="elementor-heading-title elementor-size-default"></h3>
-                        <h1>
-                          Understanding Butalbital Addiction: Risks, Withdrawal Symptoms, and Treatment
-                        </h1>
-                      </div>
-                    </div>
-                    <div className="elementor-element elementor-element-35c3479 elementor-widget elementor-widget-button" data-widget_type="button.default">
-                      <div className="elementor-widget-container">
-                        <div className="elementor-button-wrapper">
-                          <Link className="elementor-button elementor-button-link elementor-size-sm" href="/location-served/usa/butalbital-addiction-treatment/">
-                            <span className="elementor-button-content-wrapper">
-                              <span className="elementor-button-icon">
-                                <svg width={11} height={11} viewBox="0 0 11 11" fill="none">
-                                  <path d="M9.16667 3.15333L1.24667 11L0 9.75333L7.84667 1.83333H0.953333V0H11V10.0467H9.16667V3.15333Z" fill="white"></path>
-                                </svg>
-                              </span>
-                              <span className="elementor-button-text">
-                                Learn More
-                              </span>
-                            </span>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {blogs.map((blog) => (
+                <BlogCard key={blog.id} blog={blog} />
+              ))}
             </div>
             <div className="e-load-more-anchor"></div>
-            <nav className="elementor-pagination" aria-label="Pagination">
-              <span aria-current="page" className="page-numbers current">
-                <span className="elementor-screen-only">
-                  Page
-                </span>
-                1
-              </span>
-              <Link className="page-numbers" href="/blogs/?e-page-742ce1b=2">
-                <span className="elementor-screen-only">
-                  Page
-                </span>
-                2
-              </Link>
-              <Link className="page-numbers" href="/blogs/?e-page-742ce1b=3">
-                <span className="elementor-screen-only">
-                  Page
-                </span>
-                3
-              </Link>
-              <span className="page-numbers dots">
-                …
-              </span>
-              <Link className="page-numbers" href="/blogs/?e-page-742ce1b=20">
-                <span className="elementor-screen-only">
-                  Page
-                </span>
-                20
-              </Link>
-            </nav>
+            <Pagination current={currentPage} total={totalPages} />
           </div>
         </div>
       </div>

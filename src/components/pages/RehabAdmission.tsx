@@ -1,9 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Layout11 from '../layouts/Layout-11';
-import Script from 'next/script';
-import WidgetScript from '@/components/WidgetScript';
 
 const gridData0 = [
   {
@@ -42,7 +39,7 @@ const gridData0 = [
 export default function RehabAdmission(props: Record<string, string>) {
   const address_county = props.address_county ?? "Orange County";
   return (
-    <Layout11>
+    <>
       <div id="content" className="site-main post-103977 page type-page status-publish hentry">
         <div className="page-content">
           <div className="elementor elementor-103977">
@@ -135,7 +132,7 @@ export default function RehabAdmission(props: Record<string, string>) {
                       </div>
                       <div className="elementor-element elementor-element-592360b elementor-widget elementor-widget-image" data-widget_type="image.default">
                         <div className="elementor-widget-container">
-                          <img loading="lazy" src={item.image} alt="salesgirl on laptop" className="attachment-full size-full wp-image-103981" style={{maxWidth: "100%", height: "auto"}} />
+                          <img loading="lazy" src={item.image} alt="salesgirl on laptop" className="attachment-full size-full wp-image-103981" style={{width: "319px", height: "240px", maxWidth: "100%", objectFit: "cover", display: "block", margin: "0 auto"}} />
                         </div>
                       </div>
                     </div>
@@ -218,8 +215,6 @@ export default function RehabAdmission(props: Record<string, string>) {
                     <div className="elementor-element elementor-element-9086a1f elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-html" data-widget_type="html.default">
                       <div className="elementor-widget-container">
                         <iframe loading="lazy" id="JotFormIFrame-252953870854469" src="https://form.jotform.com/252953870854469?isIframeEmbed=1&amp;parentURL=https%3A%2F%2Fdistrictbehavioralhealth.com%2Frehab-admission%2F" allow="geolocation; microphone; camera; fullscreen; payment" title="TDRC New Design Insurance Form" style={{minWidth:"100%",maxWidth:"100%",border:"none",height:"700px"}}></iframe>
-                        <WidgetScript src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js" />
-                        <Script id="inline-script-0" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `window.addEventListener("widgetScriptLoaded",function(){window.jotformEmbedHandler("iframe[id='JotFormIFrame-252953870854469']", "https://form.jotform.com/")},{once:true});` }} />
                       </div>
                     </div>
                   </div>
@@ -229,6 +224,6 @@ export default function RehabAdmission(props: Record<string, string>) {
           </div>
         </div>
       </div>
-    </Layout11>
+    </>
   );
 }
