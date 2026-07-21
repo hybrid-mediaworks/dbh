@@ -44,19 +44,6 @@ export default function Page() {
                 </p>
               </div>
             </div>
-            <div className="elementor-element elementor-element-dfa3bc8 elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                    <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">
-                        Verify Insurance
-                      </span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
             <div className="elementor-element elementor-element-2219139 elementor-align-left elementor-widget elementor-widget-button" data-widget_type="button.default">
               <div className="elementor-widget-container">
                 <div className="elementor-button-wrapper">
@@ -224,19 +211,6 @@ export default function Page() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
-                                            </div>
-                                          </div>
-                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -283,19 +257,6 @@ export default function Page() {
                                               <h2 className="elementor-heading-title elementor-size-default">
                                                 PHP | IOP | OP
                                               </h2>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -348,19 +309,6 @@ export default function Page() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
-                                            </div>
-                                          </div>
-                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -407,19 +355,6 @@ export default function Page() {
                                               <h2 className="elementor-heading-title elementor-size-default">
                                                 Detox | Inpatient Residential
                                               </h2>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -472,19 +407,6 @@ export default function Page() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
-                                            </div>
-                                          </div>
-                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -531,19 +453,6 @@ export default function Page() {
                                               <h2 className="elementor-heading-title elementor-size-default">
                                                 Detox | Inpatient Residential
                                               </h2>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -596,19 +505,6 @@ export default function Page() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
-                                            </div>
-                                          </div>
-                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -655,19 +551,6 @@ export default function Page() {
                                               <h2 className="elementor-heading-title elementor-size-default">
                                                 Detox | Inpatient Residential
                                               </h2>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -720,19 +603,6 @@ export default function Page() {
                                             </div>
                                           </div>
                                         </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
-                                            </div>
-                                          </div>
-                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -779,19 +649,6 @@ export default function Page() {
                                               <h2 className="elementor-heading-title elementor-size-default">
                                                 PHP | IOP | OP
                                               </h2>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-e94eb3a elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                                          <div className="elementor-widget-container">
-                                            <div className="elementor-button-wrapper">
-                                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                                <span className="elementor-button-content-wrapper">
-                                                  <span className="elementor-button-text">
-                                                    Learn More
-                                                  </span>
-                                                </span>
-                                              </Link>
                                             </div>
                                           </div>
                                         </div>
@@ -2248,19 +2105,6 @@ counselor I can be.
                 </div>
               </div>
               <div className="elementor-element elementor-element-1caf792 e-con-full elementor-hidden-mobile e-flex e-con e-child">
-                <div className="elementor-element elementor-element-fc95a20 elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                  <div className="elementor-widget-container">
-                    <div className="elementor-button-wrapper">
-                      <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                        <span className="elementor-button-content-wrapper">
-                          <span className="elementor-button-text">
-                            Verify Insurance
-                          </span>
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
                 <div className="elementor-element elementor-element-2370f64 elementor-align-left elementor-widget elementor-widget-button" data-widget_type="button.default">
                   <div className="elementor-widget-container">
                     <div className="elementor-button-wrapper">
@@ -2574,19 +2418,6 @@ counselor I can be.
               </div>
             </div>
             <div className="elementor-element elementor-element-cb87464 e-con-full e-flex e-con e-child">
-              <div className="elementor-element elementor-element-76fa755 elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                <div className="elementor-widget-container">
-                  <div className="elementor-button-wrapper">
-                    <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                      <span className="elementor-button-content-wrapper">
-                        <span className="elementor-button-text">
-                          Explore Program
-                        </span>
-                      </span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -2617,130 +2448,11 @@ counselor I can be.
                             <Image src="/images/da37a56cbc0965701377f6a7601a8b3d.webp" alt="Frame 32" width={226} height={80} className="attachment-full size-full wp-image-208" />
                           </div>
                         </div>
-                        <div className="elementor-element elementor-element-2acd848f elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-                          <div className="elementor-widget-container">
-                            <div className="elementor-button-wrapper">
-                              <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                                <span className="elementor-button-content-wrapper">
-                                  <span className="elementor-button-text">
-                                    Read More Success Stories
-                                  </span>
-                                </span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                       <div className="elementor-element elementor-element-4ea39b57 e-con-full e-flex e-con e-child">
                         <div className="elementor-element elementor-element-2792fbc elementor-widget elementor-widget-html" data-widget_type="html.default">
                           <div className="elementor-widget-container">
                             <TrustIndexWidget widgetId="6c23c3d40f38852df246e2f6d3e" />
-                          </div>
-                        </div>
-                        <div className="elementor-element elementor-element-493db9b9 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-arrows-position-inside elementor-widget elementor-widget-loop-carousel e-widget-swiper" data-settings="{&quot;template_id&quot;:&quot;200&quot;,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:20,&quot;sizes&quot;:[]},&quot;slides_to_show&quot;:&quot;2&quot;,&quot;_skin&quot;:&quot;post&quot;,&quot;slides_to_show_tablet&quot;:&quot;2&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;edit_handle_selector&quot;:&quot;.elementor-loop-container&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;infinite&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;offset_sides&quot;:&quot;none&quot;,&quot;arrows&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;image_spacing_custom_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="loop-carousel.post">
-                          <div className="elementor-widget-container">
-                            <div className="swiper elementor-loop-container elementor-grid swiper-initialized swiper-horizontal swiper-pointer-events" role="list" dir="ltr">
-                              <div className="swiper-wrapper" aria-live="off" id="swiper-wrapper-112b9d7f1bf3cd94" style={{"transitionDuration":"0ms","transform":"none"}}>
-                                <div className="elementor elementor-200 swiper-slide e-loop-item e-loop-item-195 post-195 testimonials type-testimonials status-publish has-post-thumbnail hentry" role="group" aria-roledescription="slide" aria-label="1 of 2" style={{"visibility":"visible"}}>
-                                  <div className="elementor-element elementor-element-6b96d74 e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                    <div className="e-con-inner">
-                                      <div className="elementor-element elementor-element-d64a9fa e-con-full e-flex e-con e-child">
-                                        <div className="elementor-element elementor-element-2d86180 e-con-full e-flex e-con e-child">
-                                          <div className="elementor-element elementor-element-8181815 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
-                                            <div className="elementor-widget-container">
-                                              <Image src="/images/816165b74a85bae57fa3b804180af5d2.webp" alt="Ellipse 3" width={42} height={42} className="attachment-thumbnail size-thumbnail wp-image-198" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-1bdc3ce e-con-full e-flex e-con e-child">
-                                          <div className="elementor-element elementor-element-f582852 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
-                                            <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
-                                                Thomas daniel
-                                              </h1>
-                                            </div>
-                                          </div>
-                                          <div className="elementor-element elementor-element-a2c906b elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                                            <div className="elementor-widget-container">
-                                              <h2 className="elementor-heading-title elementor-size-default">
-                                                Senior Doctor
-                                              </h2>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="elementor-element elementor-element-5358893 e-con-full e-flex e-con e-child">
-                                        <div className="elementor-element elementor-element-38bd3b8 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                                          <div className="elementor-widget-container">
-                                            <Image src="/images/0374657cebe9faccfc6bfe800bc9bbf3.webp" alt="Frame 37" width={160} height={25} className="attachment-full size-full wp-image-197" />
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-494fdfc elementor-widget elementor-widget-theme-post-excerpt" data-widget_type="theme-post-excerpt.default">
-                                          <div className="elementor-widget-container">
-                                            
-					The team at Gratitude Lodge truly saved my life. I felt seen, heard, and cared for in every step of my recovery. I’m finally living a life of peace and purpose.				
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="elementor elementor-200 swiper-slide e-loop-item e-loop-item-196 post-196 testimonials type-testimonials status-publish has-post-thumbnail hentry" role="group" aria-roledescription="slide" aria-label="2 of 2" style={{"visibility":"visible"}}>
-                                  <div className="elementor-element elementor-element-6b96d74 e-flex e-con-boxed e-con e-parent" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                    <div className="e-con-inner">
-                                      <div className="elementor-element elementor-element-d64a9fa e-con-full e-flex e-con e-child">
-                                        <div className="elementor-element elementor-element-2d86180 e-con-full e-flex e-con e-child">
-                                          <div className="elementor-element elementor-element-8181815 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-widget_type="theme-post-featured-image.default">
-                                            <div className="elementor-widget-container">
-                                              <Image src="/images/be003f2536f1c36c7fd92ba3c94fae12.webp" alt="Ellipse 3 1" width={42} height={42} className="attachment-thumbnail size-thumbnail wp-image-199" />
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-1bdc3ce e-con-full e-flex e-con e-child">
-                                          <div className="elementor-element elementor-element-f582852 elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-widget_type="theme-post-title.default">
-                                            <div className="elementor-widget-container">
-                                              <h1 className="elementor-heading-title elementor-size-default">
-                                                Mathew
-                                              </h1>
-                                            </div>
-                                          </div>
-                                          <div className="elementor-element elementor-element-a2c906b elementor-widget elementor-widget-heading" data-widget_type="heading.default">
-                                            <div className="elementor-widget-container">
-                                              <h2 className="elementor-heading-title elementor-size-default">
-                                                Senior Doctor
-                                              </h2>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="elementor-element elementor-element-5358893 e-con-full e-flex e-con e-child">
-                                        <div className="elementor-element elementor-element-38bd3b8 elementor-widget elementor-widget-image" data-widget_type="image.default">
-                                          <div className="elementor-widget-container">
-                                            <Image src="/images/0374657cebe9faccfc6bfe800bc9bbf3.webp" alt="Frame 37" width={160} height={25} className="attachment-full size-full wp-image-197" />
-                                          </div>
-                                        </div>
-                                        <div className="elementor-element elementor-element-494fdfc elementor-widget elementor-widget-theme-post-excerpt" data-widget_type="theme-post-excerpt.default">
-                                          <div className="elementor-widget-container">
-                                            
-					Watching my loved one thrive after treatment at Alliance Recovery was life-changing. The team’s dedication to her healing was beyond anything I could have imagined.				
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="elementor-swiper-button elementor-swiper-button-prev" role="button" tabIndex={0} aria-label="Previous slide" aria-controls="swiper-wrapper-112b9d7f1bf3cd94">
-                              <svg aria-hidden="true" className="e-font-icon-svg e-fas-long-arrow-alt-left" viewBox="0 0 448 512">
-                                <path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"></path>
-                              </svg>
-                            </div>
-                            <div className="elementor-swiper-button elementor-swiper-button-next" role="button" tabIndex={0} aria-label="Next slide" aria-controls="swiper-wrapper-112b9d7f1bf3cd94">
-                              <svg aria-hidden="true" className="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512">
-                                <path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path>
-                              </svg>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -2896,19 +2608,6 @@ A Lifelong Support System.
             </div>
           </div>
           <div className="elementor-element elementor-element-0d27ce3 e-con-full e-flex e-con e-child">
-            <div className="elementor-element elementor-element-3f66793 elementor-align-left elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-button" data-widget_type="button.default">
-              <div className="elementor-widget-container">
-                <div className="elementor-button-wrapper">
-                  <Link className="elementor-button elementor-button-link elementor-size-sm" href="#">
-                    <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">
-                        Discover the Difference
-                      </span>
-                    </span>
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div className="elementor-element elementor-element-a9a82a4 interlinking-section e-flex e-con-boxed e-con e-parent e-lazyloaded" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
