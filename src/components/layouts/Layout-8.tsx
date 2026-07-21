@@ -784,45 +784,7 @@ export default function Layout8({ children }: Props) {
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="dbh-mega-blogs">
-                        <p className="dbh-mega-blogs__heading">
-                          Featured Blogs
-                        </p>
-                        <Link className="dbh-mega-blog-item" href="/location-served/usa/ativan-lorazepam/how-long-in-your-system/">
-                          <div className="dbh-mega-blog-item__thumb">
-                            <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Ativan (Lorazepam)/ How long in your system" width={80} height={60} />
-                          </div>
-                          <div className="dbh-mega-blog-item__text">
-                            <span className="dbh-mega-blog-item__title">
-                              Ativan (Lorazepam)/ How long in your...
-                            </span>
-                            <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
-                          </div>
-                        </Link>
-                        <Link className="dbh-mega-blog-item" href="/location-served/usa/adderall-addiction-treatment/how-long-in-your-system/">
-                          <div className="dbh-mega-blog-item__thumb">
-                            <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Adderall/How long in your system" width={80} height={60} />
-                          </div>
-                          <div className="dbh-mega-blog-item__text">
-                            <span className="dbh-mega-blog-item__title">
-                              Adderall/How long in your system
-                            </span>
-                            <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
-                          </div>
-                        </Link>
-                        <Link className="dbh-mega-blog-item" href="/location-served/usa/alcohol/how-long-in-your-system/">
-                          <div className="dbh-mega-blog-item__thumb">
-                            <Image src="https://districtbehavioralhealth.com/wp-content/uploads/2026/01/featured-placeholder-bg.png" alt="Alcohol/how long in your system" width={80} height={60} />
-                          </div>
-                          <div className="dbh-mega-blog-item__text">
-                            <span className="dbh-mega-blog-item__title">
-                              Alcohol/how long in your system
-                            </span>
-                            <span className="dbh-mega-blog-item__arrow" aria-hidden="true"></span>
-                          </div>
-                        </Link>
-                      </div>
+                      </div>
                     </div>
                   </div>
                 </li>
