@@ -10,7 +10,7 @@ export default function Header() {
           <div className="elementor-element elementor-element-86b5b0d this-logo-sticky elementor-widget elementor-widget-image" data-widget_type="image.default">
             <div className="elementor-widget-container">
               <Link href="/">
-                <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} className="attachment-full size-full wp-image-430" />
+                <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} sizes="190px" className="attachment-full size-full wp-image-430" />
               </Link>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Header() {
               <div className="elementor-element elementor-element-ede5212 this-logo-sticky elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
                   <Link href="/">
-                    <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} className="attachment-full size-full wp-image-430" />
+                    <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} sizes="190px" className="attachment-full size-full wp-image-430" />
                   </Link>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function Header() {
               <div className="elementor-element elementor-element-d70e0ec this-logo-sticky elementor-widget elementor-widget-image" data-widget_type="image.default">
                 <div className="elementor-widget-container">
                   <Link href="/">
-                    <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} className="attachment-full size-full wp-image-430" />
+                    <Image src="/images/27be6d13936a8bc6dbcfb656bcd95b80.webp" alt="District-Behavioral-Health-Group-Big-Logo-Size" width={840} height={259} sizes="190px" className="attachment-full size-full wp-image-430" />
                   </Link>
                 </div>
               </div>
